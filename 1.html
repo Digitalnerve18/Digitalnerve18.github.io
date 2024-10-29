@@ -1,0 +1,57 @@
+<body>
+    <div class="meteors">
+        <!-- 更多流星元素 -->
+        <!-- 省略之前的流星元素代码 -->
+    </div>
+
+    <!-- 左侧欢迎文字 -->
+    <div class="welcome-text">
+        <h3>欢迎来到Digitalnerve18的网站！</h3>
+        <p>体验精彩内容和炫酷设计，立即进入探索！</p>
+        <!-- 进入 Baidu 的按钮 -->
+        <a href="http://weavesilk.com" target="_blank" class="button">进入对称光绘</a>
+    </div>
+
+    <!-- 右上侧图片和说明 -->
+    <div class="image-container">
+        <img src="./微信图片_20241029173036.jpg" alt="网站最佳作品"/>
+        <div class="label">网站最佳作品</div>
+    </div>
+
+    <!-- 懒羊羊动画 -->
+    <div class="lazy-sheep" id="lazy-sheep">
+        <img src="./lazy_sheep.png" alt="懒羊羊" />
+    </div>
+
+    <style>
+        /* 懒羊羊动画样式 */
+        .lazy-sheep {
+            position: absolute;
+            bottom: 50px; /* 调整位置 */
+            left: 50%; /* 居中 */
+            transform: translateX(-50%);
+            animation: lazySheepAnimation 3s ease-in-out infinite;
+        }
+
+        @keyframes lazySheepAnimation {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0); /* 初始位置 */
+            }
+            50% {
+                transform: translateX(-50%) translateY(-20px); /* 上升效果 */
+            }
+        }
+
+        .lazy-sheep img {
+            width: 100px; /* 调整懒羊羊大小 */
+        }
+    </style>
+
+    <script>
+        // 可选：控制懒羊羊的额外动态效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazySheep = document.getElementById('lazy-sheep');
+            // 可在这里添加其他动态效果
+        });
+    </script>
+</body>
