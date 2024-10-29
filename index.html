@@ -5,38 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>欢迎来到我们的网站</title>
     <style>
-        /* 页面全屏背景 */
+        /* 页面全屏背景设置 */
         body, html {
             margin: 0;
             padding: 0;
             overflow: hidden;
             height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
-            background: linear-gradient(45deg, #ff6b6b, #5f27cd, #48dbfb);
-            background-size: 400% 400%;
-            animation: gradientAnimation 8s ease infinite;
+            background: #000;
             color: #fff;
             font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        
-        /* 背景动画 */
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
-        /* 中心内容 */
-        .container {
+        /* 流星雨效果 */
+        .meteor {
+            position: absolute;
+            top: -150px;
+            width: 3px;
+            height: 100px;
+            background: linear-gradient(white, rgba(255, 255, 255, 0));
+            opacity: 0.8;
+            transform: rotate(45deg);
+            animation: meteorAnimation 2s linear infinite;
+        }
+
+        @keyframes meteorAnimation {
+            0% {
+                top: -150px;
+                left: 100vw;
+                opacity: 0.8;
+            }
+            100% {
+                top: 100vh;
+                left: -50vw;
+                opacity: 0;
+            }
+        }
+
+        /* 生成多个流星 */
+        .meteors {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        /* 左侧欢迎词 */
+        .welcome-text {
+            flex: 1;
+            padding-left: 50px;
+            max-width: 400px;
             animation: fadeIn 2s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
         }
 
         h3 {
@@ -53,16 +74,34 @@
         p {
             font-size: 1.2em;
             margin: 10px 0 20px;
-            animation: fadeIn 3s ease;
         }
 
-        /* 图片样式 */
-        img {
-            width: 250px; /* 图片宽度 */
+        /* 右上侧图片与说明 */
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            padding-right: 50px;
+            position: relative;
+        }
+
+        .image-container img {
+            width: 250px;
             border-radius: 10px;
-            margin-top: 20px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             animation: fadeIn 2s ease;
+        }
+
+        .label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
         }
 
         .button {
@@ -84,12 +123,28 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="meteors">
+        <!-- 多个流星元素 -->
+        <div class="meteor" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="meteor" style="left: 20%; animation-delay: 1s;"></div>
+        <div class="meteor" style="left: 30%; animation-delay: 0.5s;"></div>
+        <div class="meteor" style="left: 40%; animation-delay: 1.5s;"></div>
+        <div class="meteor" style="left: 60%; animation-delay: 0.8s;"></div>
+        <div class="meteor" style="left: 70%; animation-delay: 2s;"></div>
+        <div class="meteor" style="left: 80%; animation-delay: 1.2s;"></div>
+    </div>
+
+    <!-- 左侧欢迎文字 -->
+    <div class="welcome-text">
         <h3>欢迎来到我们的网站！</h3>
         <p>体验精彩内容和炫酷设计，立即进入探索！</p>
-        <img src="./微信图片_20241029173036.jpg" alt="展示作品" />
-        <p>展示作品：这张图片是我们特别推荐的展示作品，展示了最新的创意设计。</p>
         <a href="home.html" class="button">进入网站</a>
+    </div>
+
+    <!-- 右上侧图片和说明 -->
+    <div class="image-container">
+        <img src="./微信图片_20241029173036.jpg" alt="网站最佳作品"/>
+        <div class="label">网站最佳作品</div>
     </div>
 </body>
 </html>
