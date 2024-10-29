@@ -39,8 +39,8 @@
             to { opacity: 1; transform: scale(1); }
         }
 
-        h1 {
-            font-size: 3em;
+        h3 {
+            font-size: 2.5em;
             letter-spacing: 5px;
             animation: textGlow 2s ease infinite alternate;
         }
@@ -48,6 +48,15 @@
         @keyframes textGlow {
             from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
             to { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+        }
+
+        /* 图片样式 */
+        img {
+            max-width: 200px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease;
         }
 
         p {
@@ -77,7 +86,7 @@
 <body>
     <div class="container">
         <h3>欢迎来到我们的网站！</h3>
-        <img src="./微信图片_20241029173036.jpg"/>
+        <img src="./微信图片_20241029173036.jpg" alt="欢迎图片"/>
         <p>体验精彩内容和炫酷设计，立即进入探索！</p>
         <a href="home.html" class="button">进入网站</a>
     </div>
