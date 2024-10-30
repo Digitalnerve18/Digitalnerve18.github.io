@@ -1,182 +1,40 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!--织音云 zhiyinidc.com -->
+<!doctype html>
+<html>
+<!--织音云 zhiyinidc.com -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>欢迎来到Digitalnerve18的网站</title>
-    <style>
-        /* 页面全屏背景设置 */
-        body, html {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg, #ff6b6b, #5f27cd, #48dbfb);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s ease infinite;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            position: relative;
-        }
-
-        /* 背景渐变动画 */
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* 流星雨效果 */
-        .meteor {
-            position: absolute;
-            top: -150px;
-            width: 2px;
-            height: 80px;
-            background: linear-gradient(white, rgba(255, 255, 255, 0));
-            opacity: 0.8;
-            transform: rotate(45deg);
-            animation: meteorAnimation 2s linear infinite;
-        }
-
-        @keyframes meteorAnimation {
-            0% {
-                top: -150px;
-                left: 100vw;
-                opacity: 0.8;
-            }
-            100% {
-                top: 100vh;
-                left: -50vw;
-                opacity: 0;
-            }
-        }
-
-        /* 生成更多流星 */
-        .meteors {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
-        }
-
-        /* 左侧欢迎词 */
-        .welcome-text {
-            flex: 1;
-            padding-left: 50px;
-            max-width: 400px;
-            animation: fadeIn 2s ease;
-            z-index: 1;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.9); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        h3 {
-            font-size: 2.5em;
-            letter-spacing: 5px;
-            animation: textGlow 2s ease infinite alternate;
-        }
-
-        @keyframes textGlow {
-            from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
-            to { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
-        }
-
-        p {
-            font-size: 1.2em;
-            margin: 10px 0 20px;
-        }
-
-        /* 右上侧图片与说明 */
-        .image-container {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-start;
-            padding-right: 50px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .image-container img {
-            width: 250px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            animation: fadeIn 2s ease;
-        }
-
-        .label {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0, 0, 0, 0.5);
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.9em;
-        }
-
-        /* 按钮样式 */
-        .button {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 1em;
-            color: #fff;
-            background-color: #333;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: transform 0.3s, background-color 0.3s;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .button:hover {
-            background-color: #555;
-            transform: scale(1.1);
-        }
-    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=11" id="mixia_vpid">
+    <title>织音云</title>
+    <meta name=keywords content="织音云">
+    <meta name=description content="织音云">
+    <link rel="icon" href="https://cdn.jyace.cn/wp-content/themes/riplus/assets/img/favicon.png">
+    <link rel="shortcut icon" href="https://cdn.jyace.cn/wp-content/themes/riplus/assets/img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+<!--织音云 zhiyinidc.com -->
 <body>
-    <div class="meteors">
-        <!-- 更多流星元素 -->
-        <div class="meteor" style="left: 5%; animation-delay: 0s;"></div>
-        <div class="meteor" style="left: 10%; animation-delay: 1s;"></div>
-        <div class="meteor" style="left: 15%; animation-delay: 0.2s;"></div>
-        <div class="meteor" style="left: 20%; animation-delay: 1.5s;"></div>
-        <div class="meteor" style="left: 25%; animation-delay: 0.3s;"></div>
-        <div class="meteor" style="left: 30%; animation-delay: 1.2s;"></div>
-        <div class="meteor" style="left: 35%; animation-delay: 2.1s;"></div>
-        <div class="meteor" style="left: 40%; animation-delay: 0.4s;"></div>
-        <div class="meteor" style="left: 45%; animation-delay: 1.7s;"></div>
-        <div class="meteor" style="left: 50%; animation-delay: 0.6s;"></div>
-        <div class="meteor" style="left: 55%; animation-delay: 1.3s;"></div>
-        <div class="meteor" style="left: 60%; animation-delay: 0.7s;"></div>
-        <div class="meteor" style="left: 65%; animation-delay: 2.3s;"></div>
-        <div class="meteor" style="left: 70%; animation-delay: 1.5s;"></div>
-        <div class="meteor" style="left: 75%; animation-delay: 0.8s;"></div>
-        <div class="meteor" style="left: 80%; animation-delay: 2s;"></div>
-        <div class="meteor" style="left: 85%; animation-delay: 1.1s;"></div>
-        <div class="meteor" style="left: 90%; animation-delay: 0.9s;"></div>
-        <div class="meteor" style="left: 95%; animation-delay: 1.8s;"></div>
+    <div class="content">
+        <div class="title">织音云</div>
+        <hr class="hr" />
+        <div class="discription">盛年不重来，一日难再晨。及时当勉励，岁月不待人。</div>
+        <hr class="hr">
+        <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+                <li class="navigation__item"><a href="https://www.zhiyinidc.com" target="_blank" title="首页">织音云</a></li>
+                <li class="navigation__item"><a href="https://www.free07.cn" target="_blank" title="自由鸟网络公益">自由鸟网络公益</a></li>
+                 <li class="navigation__item"><a href="https://www.itzhiyin.cn" title="织音博客">织音博客</a></li>
+            <li class="navigation__item"><a href="https://dns.zhiyinidc.com" title="织音云盘">织音二级域名解析</a></li>
+            </ul>
+        </nav>
+        <div class="icp"><a href="http://www.beian.miit.gov.cn" class="icpnum" target="_blank"
+                rel="nofollow">ICP备88888888号</a></div>
     </div>
-
-    <!-- 左侧欢迎文字 -->
-    <div class="welcome-text">
-        <h3>欢迎来到Digitalnerve18的网站！</h3>
-        <p>体验精彩内容和炫酷设计，立即进入探索！</p>
-        <!-- 进入 Baidu 的按钮 -->
-        <a href="http://weavesilk.com" target="_blank" class="button">进入对称光绘</a>
-    </div>
-
-    <!-- 右上侧图片和说明 -->
-    <div class="image-container">
-        <img src="./微信图片_20241029173036.jpg" alt="网站最佳作品"/>
-        <div class="label">网站最佳作品</div>
-    </div>
+<!--织音云 zhiyinidc.com -->
+    <div class="landscape"></div>
+    <div class="filter"></div>
+    <canvas id="canvas"></canvas>
+    <script type="text/javascript" src="js/sky.js"></script>
 </body>
 </html>
